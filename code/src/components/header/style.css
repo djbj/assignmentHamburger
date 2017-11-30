@@ -13,3 +13,52 @@ header a {
   display: flex;
   justify-content: space-between;
 }
+
+.hamburgerMenu {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .hamburgerMenu {
+    display:inline-block;
+    background-color: red;
+  }
+
+  header {
+    /*background: yellow;*/
+    /*display: none;*/
+  }
+
+  .hamburger {
+    width: 75px;
+    height: 75px;
+    background: red;
+    display: block;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hamburger-checkbox {
+    display: none;
+  }
+
+  .bar {
+      width: 45px;
+      height: 5px;
+      background-color: black;
+      margin: 6px auto;
+  }
+
+  .header-grid {
+    flex-direction: column;
+  }
+
+  /*input,
+  label {
+    display: block;
+    width: 75px;
+    height: 75px;
+    background-color: yellow;
+  }*/
+}
