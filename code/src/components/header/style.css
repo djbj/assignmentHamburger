@@ -11,54 +11,69 @@ header a {
 
 .header-grid {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between;
 }
 
-.hamburgerMenu {
+.hamburger,
+.hamburger-checkbox {
   display: none;
 }
 
-@media (max-width: 600px) {
-  .hamburgerMenu {
-    display:inline-block;
-    background-color: red;
-  }
+/*.hamburgerMenu {
+  display: none;
+}*/
 
-  header {
-    /*background: yellow;*/
-    /*display: none;*/
+@media (max-width: 600px) {
+  .header {
+    margin: 0;
   }
 
   .hamburger {
     width: 75px;
-    height: 75px;
-    background: red;
+    height: 50px;
+    background: #FE3525;
     display: block;
     cursor: pointer;
     margin: 0;
     padding: 0;
   }
 
-  .hamburger-checkbox {
-    display: none;
+  .hamburgerBars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .bar {
       width: 45px;
       height: 5px;
-      background-color: black;
-      margin: 6px auto;
+      background-color: #fff;
+      padding: 0;
+      margin: 5px auto;
+  }
+
+  .hamburger-checkbox {
+    display: none;
+  }
+
+  a {
+    margin: 0;
+    pading: 12px;
+    text-align: center;
+    border-bottom: 1px dotted red;
+    font-size: 1.4em;
   }
 
   .header-grid {
+    display: none;
     flex-direction: column;
   }
 
-  /*input,
-  label {
-    display: block;
-    width: 75px;
-    height: 75px;
-    background-color: yellow;
-  }*/
+  .hamburger-checkbox:checked + .header-grid {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
